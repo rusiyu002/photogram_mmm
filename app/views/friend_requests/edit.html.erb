@@ -24,7 +24,7 @@
           Send
         </label>
 
-        <input type="text" id="send_id" name="send_id" placeholder="Send" class="form-control" value="<%= @friend_request.send_id %>">
+        <%= select_tag(:send_id, options_from_collection_for_select(User.all, :id, :email, @friend_request.send_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for recipent_id -->
