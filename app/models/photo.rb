@@ -8,6 +8,10 @@ class Photo < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :followers,
+             :through => :user,
+             :source => :following
+
   # Validations
 
 end
